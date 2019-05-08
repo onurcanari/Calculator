@@ -5,15 +5,16 @@ using System.Windows.Forms;
 namespace Calculator {
     public partial class Form1 : MetroFramework.Forms.MetroForm {
         Calculator calc;
-        Number number;
+        DynamicText number = new Number();
+        DynamicText expressions = new Number();
         public Form1() {
             InitializeComponent();
-            lblNumber.DataBindings.Add("Number", number.number, "n");
+            lblNumber.DataBindings.Add("Text", number, "number");
+            lblExpression.DataBindings.Add("Text", expressions, "number");
         }
 
         private void Form1_Load(object sender, EventArgs e) {
-            calc=new Calculator();
-            number = calc.
+            calc=new Calculator(number, expressions);
         }
 
         private void One_Click(object sender, EventArgs e) {
@@ -44,7 +45,8 @@ namespace Calculator {
             number.Append("9");
         }
         private void Add_Click(object sender, EventArgs e) {
-            number.Append("+");
+            expressions.Append(number.ToString() + " +");
+            lblExpression.Text=expressions.ToString();
         }
         private void Subtract_Click(object sender, EventArgs e) {
             number.Append("-");
@@ -72,7 +74,18 @@ namespace Calculator {
 
         private void Backspace(object sender, EventArgs e) {
             number.Delete();
-            islemler.Text=number.ProcessingText();
+        }
+
+        private void Zero_Click(object sender, EventArgs e) {
+            number.Append("0");
+        }
+
+        private void FindFactorial(object sender, EventArgs e) {
+
+        }
+
+        private void MetroButton35_Click(object sender, EventArgs e) {
+
         }
     }
 }
