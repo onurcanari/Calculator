@@ -6,17 +6,17 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Calculator {
-    class Number : DynamicText {
+    class Expression : DynamicText{
 
-
+        public Expression() {
+            text="";
+        }
         public override void Append(string s) {
-            if(text.Equals("0"))
-                text="";
             text+=s;
             OnPropertyChanged();
         }
         public override void Delete() {
-            if(text.Equals("0")) {
+            if(text.Equals("")) {
                 return;
             }
             try {
@@ -29,8 +29,7 @@ namespace Calculator {
             OnPropertyChanged();
         }
         public override void Clear() {
-            text="0";
-            OnPropertyChanged();
+            text="";
         }
     }
 }

@@ -8,24 +8,25 @@ using System.Threading.Tasks;
 
 namespace Calculator {
     abstract class DynamicText : INotifyPropertyChanged {
-        protected string _number;
-        public string number{
-            get{ return _number; }
+        protected string _text;
+        public string text{
+            get{ return _text; }
             set {
-                _number=value;
+                _text=value;
                 OnPropertyChanged("");
             }
         }
 
         public DynamicText() {
-            number="0";
+            text="0";
         }
-
+        
         public abstract void Append(string s);
         public abstract void Delete();
+        public abstract void Clear();
         
         public override string ToString() {
-            return number.ToString();
+            return text;
         }
         protected virtual void OnPropertyChanged([System.Runtime.CompilerServices.CallerMemberName] string propertyName = null) {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));

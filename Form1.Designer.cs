@@ -42,25 +42,25 @@
             this.metroButton17 = new MetroFramework.Controls.MetroButton();
             this.metroButton18 = new MetroFramework.Controls.MetroButton();
             this.metroButton19 = new MetroFramework.Controls.MetroButton();
-            this.metroButton20 = new MetroFramework.Controls.MetroButton();
+            this.btnDivide = new MetroFramework.Controls.MetroButton();
             this.metroButton21 = new MetroFramework.Controls.MetroButton();
-            this.metroButton9 = new MetroFramework.Controls.MetroButton();
-            this.metroButton10 = new MetroFramework.Controls.MetroButton();
-            this.metroButton11 = new MetroFramework.Controls.MetroButton();
-            this.metroButton22 = new MetroFramework.Controls.MetroButton();
+            this.btnSeven = new MetroFramework.Controls.MetroButton();
+            this.btnEight = new MetroFramework.Controls.MetroButton();
+            this.btnNine = new MetroFramework.Controls.MetroButton();
+            this.btnMultiply = new MetroFramework.Controls.MetroButton();
             this.metroButton23 = new MetroFramework.Controls.MetroButton();
-            this.metroButton13 = new MetroFramework.Controls.MetroButton();
-            this.metroButton14 = new MetroFramework.Controls.MetroButton();
-            this.metroButton15 = new MetroFramework.Controls.MetroButton();
-            this.metroButton24 = new MetroFramework.Controls.MetroButton();
+            this.btnFour = new MetroFramework.Controls.MetroButton();
+            this.btnFive = new MetroFramework.Controls.MetroButton();
+            this.btnSix = new MetroFramework.Controls.MetroButton();
+            this.btnSubtract = new MetroFramework.Controls.MetroButton();
             this.metroButton26 = new MetroFramework.Controls.MetroButton();
-            this.metroButton28 = new MetroFramework.Controls.MetroButton();
-            this.metroButton29 = new MetroFramework.Controls.MetroButton();
-            this.metroButton30 = new MetroFramework.Controls.MetroButton();
-            this.metroButton27 = new MetroFramework.Controls.MetroButton();
+            this.btnOne = new MetroFramework.Controls.MetroButton();
+            this.btnTwo = new MetroFramework.Controls.MetroButton();
+            this.btnThree = new MetroFramework.Controls.MetroButton();
+            this.btnAdd = new MetroFramework.Controls.MetroButton();
             this.metroButton31 = new MetroFramework.Controls.MetroButton();
             this.metroButton32 = new MetroFramework.Controls.MetroButton();
-            this.metroButton33 = new MetroFramework.Controls.MetroButton();
+            this.btnZero = new MetroFramework.Controls.MetroButton();
             this.metroButton34 = new MetroFramework.Controls.MetroButton();
             this.metroButton35 = new MetroFramework.Controls.MetroButton();
             this.lblNumber = new System.Windows.Forms.Label();
@@ -255,19 +255,19 @@
             this.metroButton19.UseSelectable = true;
             this.metroButton19.Click += new System.EventHandler(this.Backspace);
             // 
-            // metroButton20
+            // btnDivide
             // 
-            this.metroButton20.BackColor = System.Drawing.Color.Transparent;
-            this.metroButton20.FontSize = MetroFramework.MetroButtonSize.Tall;
-            this.metroButton20.FontWeight = MetroFramework.MetroButtonWeight.Regular;
-            this.metroButton20.Location = new System.Drawing.Point(332, 120);
-            this.metroButton20.Margin = new System.Windows.Forms.Padding(0);
-            this.metroButton20.Name = "metroButton20";
-            this.metroButton20.Size = new System.Drawing.Size(82, 58);
-            this.metroButton20.TabIndex = 19;
-            this.metroButton20.Text = "/";
-            this.metroButton20.UseSelectable = true;
-            this.metroButton20.Click += new System.EventHandler(this.Divide_Click);
+            this.btnDivide.BackColor = System.Drawing.Color.Transparent;
+            this.btnDivide.FontSize = MetroFramework.MetroButtonSize.Tall;
+            this.btnDivide.FontWeight = MetroFramework.MetroButtonWeight.Regular;
+            this.btnDivide.Location = new System.Drawing.Point(332, 120);
+            this.btnDivide.Margin = new System.Windows.Forms.Padding(0);
+            this.btnDivide.Name = "btnDivide";
+            this.btnDivide.Size = new System.Drawing.Size(82, 58);
+            this.btnDivide.TabIndex = 19;
+            this.btnDivide.Text = "/";
+            this.btnDivide.UseSelectable = true;
+            this.btnDivide.Click += new System.EventHandler(this.Operators_Click);
             // 
             // metroButton21
             // 
@@ -282,58 +282,58 @@
             this.metroButton21.Text = "+/-";
             this.metroButton21.UseSelectable = true;
             // 
-            // metroButton9
+            // btnSeven
             // 
-            this.metroButton9.BackColor = System.Drawing.Color.Transparent;
-            this.metroButton9.FontSize = MetroFramework.MetroButtonSize.Tall;
-            this.metroButton9.Location = new System.Drawing.Point(83, 180);
-            this.metroButton9.Margin = new System.Windows.Forms.Padding(0);
-            this.metroButton9.Name = "metroButton9";
-            this.metroButton9.Size = new System.Drawing.Size(82, 58);
-            this.metroButton9.TabIndex = 8;
-            this.metroButton9.Text = "7";
-            this.metroButton9.UseSelectable = true;
-            this.metroButton9.Click += new System.EventHandler(this.Seven_Click);
+            this.btnSeven.BackColor = System.Drawing.Color.Transparent;
+            this.btnSeven.FontSize = MetroFramework.MetroButtonSize.Tall;
+            this.btnSeven.Location = new System.Drawing.Point(83, 180);
+            this.btnSeven.Margin = new System.Windows.Forms.Padding(0);
+            this.btnSeven.Name = "btnSeven";
+            this.btnSeven.Size = new System.Drawing.Size(82, 58);
+            this.btnSeven.TabIndex = 8;
+            this.btnSeven.Text = "7";
+            this.btnSeven.UseSelectable = true;
+            this.btnSeven.Click += new System.EventHandler(this.Digits_Click);
             // 
-            // metroButton10
+            // btnEight
             // 
-            this.metroButton10.BackColor = System.Drawing.Color.Transparent;
-            this.metroButton10.FontSize = MetroFramework.MetroButtonSize.Tall;
-            this.metroButton10.Location = new System.Drawing.Point(166, 180);
-            this.metroButton10.Margin = new System.Windows.Forms.Padding(0);
-            this.metroButton10.Name = "metroButton10";
-            this.metroButton10.Size = new System.Drawing.Size(82, 58);
-            this.metroButton10.TabIndex = 9;
-            this.metroButton10.Text = "8";
-            this.metroButton10.UseSelectable = true;
-            this.metroButton10.Click += new System.EventHandler(this.Eight_Click);
+            this.btnEight.BackColor = System.Drawing.Color.Transparent;
+            this.btnEight.FontSize = MetroFramework.MetroButtonSize.Tall;
+            this.btnEight.Location = new System.Drawing.Point(166, 180);
+            this.btnEight.Margin = new System.Windows.Forms.Padding(0);
+            this.btnEight.Name = "btnEight";
+            this.btnEight.Size = new System.Drawing.Size(82, 58);
+            this.btnEight.TabIndex = 9;
+            this.btnEight.Text = "8";
+            this.btnEight.UseSelectable = true;
+            this.btnEight.Click += new System.EventHandler(this.Digits_Click);
             // 
-            // metroButton11
+            // btnNine
             // 
-            this.metroButton11.BackColor = System.Drawing.Color.Transparent;
-            this.metroButton11.FontSize = MetroFramework.MetroButtonSize.Tall;
-            this.metroButton11.Location = new System.Drawing.Point(249, 180);
-            this.metroButton11.Margin = new System.Windows.Forms.Padding(0);
-            this.metroButton11.Name = "metroButton11";
-            this.metroButton11.Size = new System.Drawing.Size(82, 58);
-            this.metroButton11.TabIndex = 10;
-            this.metroButton11.Text = "9";
-            this.metroButton11.UseSelectable = true;
-            this.metroButton11.Click += new System.EventHandler(this.Nine_Click);
+            this.btnNine.BackColor = System.Drawing.Color.Transparent;
+            this.btnNine.FontSize = MetroFramework.MetroButtonSize.Tall;
+            this.btnNine.Location = new System.Drawing.Point(249, 180);
+            this.btnNine.Margin = new System.Windows.Forms.Padding(0);
+            this.btnNine.Name = "btnNine";
+            this.btnNine.Size = new System.Drawing.Size(82, 58);
+            this.btnNine.TabIndex = 10;
+            this.btnNine.Text = "9";
+            this.btnNine.UseSelectable = true;
+            this.btnNine.Click += new System.EventHandler(this.Digits_Click);
             // 
-            // metroButton22
+            // btnMultiply
             // 
-            this.metroButton22.BackColor = System.Drawing.Color.Transparent;
-            this.metroButton22.FontSize = MetroFramework.MetroButtonSize.Tall;
-            this.metroButton22.FontWeight = MetroFramework.MetroButtonWeight.Regular;
-            this.metroButton22.Location = new System.Drawing.Point(332, 180);
-            this.metroButton22.Margin = new System.Windows.Forms.Padding(0);
-            this.metroButton22.Name = "metroButton22";
-            this.metroButton22.Size = new System.Drawing.Size(82, 58);
-            this.metroButton22.TabIndex = 21;
-            this.metroButton22.Text = "x";
-            this.metroButton22.UseSelectable = true;
-            this.metroButton22.Click += new System.EventHandler(this.Multiply_Click);
+            this.btnMultiply.BackColor = System.Drawing.Color.Transparent;
+            this.btnMultiply.FontSize = MetroFramework.MetroButtonSize.Tall;
+            this.btnMultiply.FontWeight = MetroFramework.MetroButtonWeight.Regular;
+            this.btnMultiply.Location = new System.Drawing.Point(332, 180);
+            this.btnMultiply.Margin = new System.Windows.Forms.Padding(0);
+            this.btnMultiply.Name = "btnMultiply";
+            this.btnMultiply.Size = new System.Drawing.Size(82, 58);
+            this.btnMultiply.TabIndex = 21;
+            this.btnMultiply.Text = "x";
+            this.btnMultiply.UseSelectable = true;
+            this.btnMultiply.Click += new System.EventHandler(this.Operators_Click);
             // 
             // metroButton23
             // 
@@ -349,58 +349,58 @@
             this.metroButton23.UseSelectable = true;
             this.metroButton23.Click += new System.EventHandler(this.FindFactorial);
             // 
-            // metroButton13
+            // btnFour
             // 
-            this.metroButton13.BackColor = System.Drawing.Color.Transparent;
-            this.metroButton13.FontSize = MetroFramework.MetroButtonSize.Tall;
-            this.metroButton13.Location = new System.Drawing.Point(83, 240);
-            this.metroButton13.Margin = new System.Windows.Forms.Padding(0);
-            this.metroButton13.Name = "metroButton13";
-            this.metroButton13.Size = new System.Drawing.Size(82, 58);
-            this.metroButton13.TabIndex = 12;
-            this.metroButton13.Text = "4";
-            this.metroButton13.UseSelectable = true;
-            this.metroButton13.Click += new System.EventHandler(this.Four_Click);
+            this.btnFour.BackColor = System.Drawing.Color.Transparent;
+            this.btnFour.FontSize = MetroFramework.MetroButtonSize.Tall;
+            this.btnFour.Location = new System.Drawing.Point(83, 240);
+            this.btnFour.Margin = new System.Windows.Forms.Padding(0);
+            this.btnFour.Name = "btnFour";
+            this.btnFour.Size = new System.Drawing.Size(82, 58);
+            this.btnFour.TabIndex = 12;
+            this.btnFour.Text = "4";
+            this.btnFour.UseSelectable = true;
+            this.btnFour.Click += new System.EventHandler(this.Digits_Click);
             // 
-            // metroButton14
+            // btnFive
             // 
-            this.metroButton14.BackColor = System.Drawing.Color.Transparent;
-            this.metroButton14.FontSize = MetroFramework.MetroButtonSize.Tall;
-            this.metroButton14.Location = new System.Drawing.Point(166, 240);
-            this.metroButton14.Margin = new System.Windows.Forms.Padding(0);
-            this.metroButton14.Name = "metroButton14";
-            this.metroButton14.Size = new System.Drawing.Size(82, 58);
-            this.metroButton14.TabIndex = 13;
-            this.metroButton14.Text = "5";
-            this.metroButton14.UseSelectable = true;
-            this.metroButton14.Click += new System.EventHandler(this.Five_Click);
+            this.btnFive.BackColor = System.Drawing.Color.Transparent;
+            this.btnFive.FontSize = MetroFramework.MetroButtonSize.Tall;
+            this.btnFive.Location = new System.Drawing.Point(166, 240);
+            this.btnFive.Margin = new System.Windows.Forms.Padding(0);
+            this.btnFive.Name = "btnFive";
+            this.btnFive.Size = new System.Drawing.Size(82, 58);
+            this.btnFive.TabIndex = 13;
+            this.btnFive.Text = "5";
+            this.btnFive.UseSelectable = true;
+            this.btnFive.Click += new System.EventHandler(this.Digits_Click);
             // 
-            // metroButton15
+            // btnSix
             // 
-            this.metroButton15.BackColor = System.Drawing.Color.Transparent;
-            this.metroButton15.FontSize = MetroFramework.MetroButtonSize.Tall;
-            this.metroButton15.Location = new System.Drawing.Point(249, 240);
-            this.metroButton15.Margin = new System.Windows.Forms.Padding(0);
-            this.metroButton15.Name = "metroButton15";
-            this.metroButton15.Size = new System.Drawing.Size(82, 58);
-            this.metroButton15.TabIndex = 14;
-            this.metroButton15.Text = "6";
-            this.metroButton15.UseSelectable = true;
-            this.metroButton15.Click += new System.EventHandler(this.Six_Click);
+            this.btnSix.BackColor = System.Drawing.Color.Transparent;
+            this.btnSix.FontSize = MetroFramework.MetroButtonSize.Tall;
+            this.btnSix.Location = new System.Drawing.Point(249, 240);
+            this.btnSix.Margin = new System.Windows.Forms.Padding(0);
+            this.btnSix.Name = "btnSix";
+            this.btnSix.Size = new System.Drawing.Size(82, 58);
+            this.btnSix.TabIndex = 14;
+            this.btnSix.Text = "6";
+            this.btnSix.UseSelectable = true;
+            this.btnSix.Click += new System.EventHandler(this.Digits_Click);
             // 
-            // metroButton24
+            // btnSubtract
             // 
-            this.metroButton24.BackColor = System.Drawing.Color.Transparent;
-            this.metroButton24.FontSize = MetroFramework.MetroButtonSize.Tall;
-            this.metroButton24.FontWeight = MetroFramework.MetroButtonWeight.Regular;
-            this.metroButton24.Location = new System.Drawing.Point(332, 240);
-            this.metroButton24.Margin = new System.Windows.Forms.Padding(0);
-            this.metroButton24.Name = "metroButton24";
-            this.metroButton24.Size = new System.Drawing.Size(82, 58);
-            this.metroButton24.TabIndex = 23;
-            this.metroButton24.Text = "-";
-            this.metroButton24.UseSelectable = true;
-            this.metroButton24.Click += new System.EventHandler(this.Subtract_Click);
+            this.btnSubtract.BackColor = System.Drawing.Color.Transparent;
+            this.btnSubtract.FontSize = MetroFramework.MetroButtonSize.Tall;
+            this.btnSubtract.FontWeight = MetroFramework.MetroButtonWeight.Regular;
+            this.btnSubtract.Location = new System.Drawing.Point(332, 240);
+            this.btnSubtract.Margin = new System.Windows.Forms.Padding(0);
+            this.btnSubtract.Name = "btnSubtract";
+            this.btnSubtract.Size = new System.Drawing.Size(82, 58);
+            this.btnSubtract.TabIndex = 23;
+            this.btnSubtract.Text = "-";
+            this.btnSubtract.UseSelectable = true;
+            this.btnSubtract.Click += new System.EventHandler(this.Operators_Click);
             // 
             // metroButton26
             // 
@@ -415,58 +415,58 @@
             this.metroButton26.Text = "6";
             this.metroButton26.UseSelectable = true;
             // 
-            // metroButton28
+            // btnOne
             // 
-            this.metroButton28.BackColor = System.Drawing.Color.Transparent;
-            this.metroButton28.FontSize = MetroFramework.MetroButtonSize.Tall;
-            this.metroButton28.Location = new System.Drawing.Point(83, 300);
-            this.metroButton28.Margin = new System.Windows.Forms.Padding(0);
-            this.metroButton28.Name = "metroButton28";
-            this.metroButton28.Size = new System.Drawing.Size(82, 58);
-            this.metroButton28.TabIndex = 27;
-            this.metroButton28.Text = "1";
-            this.metroButton28.UseSelectable = true;
-            this.metroButton28.Click += new System.EventHandler(this.One_Click);
+            this.btnOne.BackColor = System.Drawing.Color.Transparent;
+            this.btnOne.FontSize = MetroFramework.MetroButtonSize.Tall;
+            this.btnOne.Location = new System.Drawing.Point(83, 300);
+            this.btnOne.Margin = new System.Windows.Forms.Padding(0);
+            this.btnOne.Name = "btnOne";
+            this.btnOne.Size = new System.Drawing.Size(82, 58);
+            this.btnOne.TabIndex = 27;
+            this.btnOne.Text = "1";
+            this.btnOne.UseSelectable = true;
+            this.btnOne.Click += new System.EventHandler(this.Digits_Click);
             // 
-            // metroButton29
+            // btnTwo
             // 
-            this.metroButton29.BackColor = System.Drawing.Color.Transparent;
-            this.metroButton29.FontSize = MetroFramework.MetroButtonSize.Tall;
-            this.metroButton29.Location = new System.Drawing.Point(166, 300);
-            this.metroButton29.Margin = new System.Windows.Forms.Padding(0);
-            this.metroButton29.Name = "metroButton29";
-            this.metroButton29.Size = new System.Drawing.Size(82, 58);
-            this.metroButton29.TabIndex = 28;
-            this.metroButton29.Text = "2";
-            this.metroButton29.UseSelectable = true;
-            this.metroButton29.Click += new System.EventHandler(this.Two_Click);
+            this.btnTwo.BackColor = System.Drawing.Color.Transparent;
+            this.btnTwo.FontSize = MetroFramework.MetroButtonSize.Tall;
+            this.btnTwo.Location = new System.Drawing.Point(166, 300);
+            this.btnTwo.Margin = new System.Windows.Forms.Padding(0);
+            this.btnTwo.Name = "btnTwo";
+            this.btnTwo.Size = new System.Drawing.Size(82, 58);
+            this.btnTwo.TabIndex = 28;
+            this.btnTwo.Text = "2";
+            this.btnTwo.UseSelectable = true;
+            this.btnTwo.Click += new System.EventHandler(this.Digits_Click);
             // 
-            // metroButton30
+            // btnThree
             // 
-            this.metroButton30.BackColor = System.Drawing.Color.Transparent;
-            this.metroButton30.FontSize = MetroFramework.MetroButtonSize.Tall;
-            this.metroButton30.Location = new System.Drawing.Point(249, 300);
-            this.metroButton30.Margin = new System.Windows.Forms.Padding(0);
-            this.metroButton30.Name = "metroButton30";
-            this.metroButton30.Size = new System.Drawing.Size(82, 58);
-            this.metroButton30.TabIndex = 29;
-            this.metroButton30.Text = "3";
-            this.metroButton30.UseSelectable = true;
-            this.metroButton30.Click += new System.EventHandler(this.Three_Click);
+            this.btnThree.BackColor = System.Drawing.Color.Transparent;
+            this.btnThree.FontSize = MetroFramework.MetroButtonSize.Tall;
+            this.btnThree.Location = new System.Drawing.Point(249, 300);
+            this.btnThree.Margin = new System.Windows.Forms.Padding(0);
+            this.btnThree.Name = "btnThree";
+            this.btnThree.Size = new System.Drawing.Size(82, 58);
+            this.btnThree.TabIndex = 29;
+            this.btnThree.Text = "3";
+            this.btnThree.UseSelectable = true;
+            this.btnThree.Click += new System.EventHandler(this.Digits_Click);
             // 
-            // metroButton27
+            // btnAdd
             // 
-            this.metroButton27.BackColor = System.Drawing.Color.Transparent;
-            this.metroButton27.FontSize = MetroFramework.MetroButtonSize.Tall;
-            this.metroButton27.FontWeight = MetroFramework.MetroButtonWeight.Regular;
-            this.metroButton27.Location = new System.Drawing.Point(332, 300);
-            this.metroButton27.Margin = new System.Windows.Forms.Padding(0);
-            this.metroButton27.Name = "metroButton27";
-            this.metroButton27.Size = new System.Drawing.Size(82, 58);
-            this.metroButton27.TabIndex = 26;
-            this.metroButton27.Text = "+";
-            this.metroButton27.UseSelectable = true;
-            this.metroButton27.Click += new System.EventHandler(this.Add_Click);
+            this.btnAdd.BackColor = System.Drawing.Color.Transparent;
+            this.btnAdd.FontSize = MetroFramework.MetroButtonSize.Tall;
+            this.btnAdd.FontWeight = MetroFramework.MetroButtonWeight.Regular;
+            this.btnAdd.Location = new System.Drawing.Point(332, 300);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(0);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(82, 58);
+            this.btnAdd.TabIndex = 26;
+            this.btnAdd.Text = "+";
+            this.btnAdd.UseSelectable = true;
+            this.btnAdd.Click += new System.EventHandler(this.Operators_Click);
             // 
             // metroButton31
             // 
@@ -494,18 +494,18 @@
             this.metroButton32.Text = ")";
             this.metroButton32.UseSelectable = true;
             // 
-            // metroButton33
+            // btnZero
             // 
-            this.metroButton33.BackColor = System.Drawing.Color.Transparent;
-            this.metroButton33.FontSize = MetroFramework.MetroButtonSize.Tall;
-            this.metroButton33.Location = new System.Drawing.Point(166, 360);
-            this.metroButton33.Margin = new System.Windows.Forms.Padding(0);
-            this.metroButton33.Name = "metroButton33";
-            this.metroButton33.Size = new System.Drawing.Size(82, 58);
-            this.metroButton33.TabIndex = 32;
-            this.metroButton33.Text = "0";
-            this.metroButton33.UseSelectable = true;
-            this.metroButton33.Click += new System.EventHandler(this.Zero_Click);
+            this.btnZero.BackColor = System.Drawing.Color.Transparent;
+            this.btnZero.FontSize = MetroFramework.MetroButtonSize.Tall;
+            this.btnZero.Location = new System.Drawing.Point(166, 360);
+            this.btnZero.Margin = new System.Windows.Forms.Padding(0);
+            this.btnZero.Name = "btnZero";
+            this.btnZero.Size = new System.Drawing.Size(82, 58);
+            this.btnZero.TabIndex = 32;
+            this.btnZero.Text = "0";
+            this.btnZero.UseSelectable = true;
+            this.btnZero.Click += new System.EventHandler(this.Digits_Click);
             // 
             // metroButton34
             // 
@@ -532,7 +532,7 @@
             this.metroButton35.TabIndex = 34;
             this.metroButton35.Text = "=";
             this.metroButton35.UseSelectable = true;
-            this.metroButton35.Click += new System.EventHandler(this.MetroButton35_Click);
+            this.metroButton35.Click += new System.EventHandler(this.Evaluate_Click);
             // 
             // lblNumber
             // 
@@ -585,34 +585,34 @@
             this.tableLayoutPanel2.Controls.Add(this.metroButton35, 4, 6);
             this.tableLayoutPanel2.Controls.Add(this.metroButton5, 0, 1);
             this.tableLayoutPanel2.Controls.Add(this.metroButton4, 3, 0);
-            this.tableLayoutPanel2.Controls.Add(this.metroButton33, 2, 6);
+            this.tableLayoutPanel2.Controls.Add(this.btnZero, 2, 6);
             this.tableLayoutPanel2.Controls.Add(this.metroButton25, 4, 0);
             this.tableLayoutPanel2.Controls.Add(this.metroButton32, 1, 6);
             this.tableLayoutPanel2.Controls.Add(this.metroButton6, 1, 1);
             this.tableLayoutPanel2.Controls.Add(this.metroButton31, 0, 6);
             this.tableLayoutPanel2.Controls.Add(this.metroButton7, 2, 1);
-            this.tableLayoutPanel2.Controls.Add(this.metroButton27, 4, 5);
+            this.tableLayoutPanel2.Controls.Add(this.btnAdd, 4, 5);
             this.tableLayoutPanel2.Controls.Add(this.metroButton8, 3, 1);
-            this.tableLayoutPanel2.Controls.Add(this.metroButton30, 3, 5);
+            this.tableLayoutPanel2.Controls.Add(this.btnThree, 3, 5);
             this.tableLayoutPanel2.Controls.Add(this.metroButton12, 4, 1);
-            this.tableLayoutPanel2.Controls.Add(this.metroButton29, 2, 5);
+            this.tableLayoutPanel2.Controls.Add(this.btnTwo, 2, 5);
             this.tableLayoutPanel2.Controls.Add(this.metroButton16, 0, 2);
-            this.tableLayoutPanel2.Controls.Add(this.metroButton28, 1, 5);
+            this.tableLayoutPanel2.Controls.Add(this.btnOne, 1, 5);
             this.tableLayoutPanel2.Controls.Add(this.metroButton17, 1, 2);
             this.tableLayoutPanel2.Controls.Add(this.metroButton26, 0, 5);
             this.tableLayoutPanel2.Controls.Add(this.metroButton18, 2, 2);
-            this.tableLayoutPanel2.Controls.Add(this.metroButton24, 4, 4);
+            this.tableLayoutPanel2.Controls.Add(this.btnSubtract, 4, 4);
             this.tableLayoutPanel2.Controls.Add(this.metroButton19, 3, 2);
-            this.tableLayoutPanel2.Controls.Add(this.metroButton15, 3, 4);
-            this.tableLayoutPanel2.Controls.Add(this.metroButton20, 4, 2);
-            this.tableLayoutPanel2.Controls.Add(this.metroButton14, 2, 4);
+            this.tableLayoutPanel2.Controls.Add(this.btnSix, 3, 4);
+            this.tableLayoutPanel2.Controls.Add(this.btnDivide, 4, 2);
+            this.tableLayoutPanel2.Controls.Add(this.btnFive, 2, 4);
             this.tableLayoutPanel2.Controls.Add(this.metroButton21, 0, 3);
-            this.tableLayoutPanel2.Controls.Add(this.metroButton13, 1, 4);
-            this.tableLayoutPanel2.Controls.Add(this.metroButton9, 1, 3);
+            this.tableLayoutPanel2.Controls.Add(this.btnFour, 1, 4);
+            this.tableLayoutPanel2.Controls.Add(this.btnSeven, 1, 3);
             this.tableLayoutPanel2.Controls.Add(this.metroButton23, 0, 4);
-            this.tableLayoutPanel2.Controls.Add(this.metroButton10, 2, 3);
-            this.tableLayoutPanel2.Controls.Add(this.metroButton22, 4, 3);
-            this.tableLayoutPanel2.Controls.Add(this.metroButton11, 3, 3);
+            this.tableLayoutPanel2.Controls.Add(this.btnEight, 2, 3);
+            this.tableLayoutPanel2.Controls.Add(this.btnMultiply, 4, 3);
+            this.tableLayoutPanel2.Controls.Add(this.btnNine, 3, 3);
             this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 236);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 7;
@@ -659,31 +659,31 @@
         private MetroFramework.Controls.MetroButton metroButton6;
         private MetroFramework.Controls.MetroButton metroButton7;
         private MetroFramework.Controls.MetroButton metroButton8;
-        private MetroFramework.Controls.MetroButton metroButton9;
-        private MetroFramework.Controls.MetroButton metroButton10;
-        private MetroFramework.Controls.MetroButton metroButton11;
+        private MetroFramework.Controls.MetroButton btnSeven;
+        private MetroFramework.Controls.MetroButton btnEight;
+        private MetroFramework.Controls.MetroButton btnNine;
         private MetroFramework.Controls.MetroButton metroButton12;
-        private MetroFramework.Controls.MetroButton metroButton13;
-        private MetroFramework.Controls.MetroButton metroButton14;
-        private MetroFramework.Controls.MetroButton metroButton15;
+        private MetroFramework.Controls.MetroButton btnFour;
+        private MetroFramework.Controls.MetroButton btnFive;
+        private MetroFramework.Controls.MetroButton btnSix;
         private MetroFramework.Controls.MetroButton metroButton16;
         private MetroFramework.Controls.MetroButton metroButton17;
         private MetroFramework.Controls.MetroButton metroButton18;
         private MetroFramework.Controls.MetroButton metroButton19;
-        private MetroFramework.Controls.MetroButton metroButton20;
+        private MetroFramework.Controls.MetroButton btnDivide;
         private MetroFramework.Controls.MetroButton metroButton21;
-        private MetroFramework.Controls.MetroButton metroButton22;
+        private MetroFramework.Controls.MetroButton btnMultiply;
         private MetroFramework.Controls.MetroButton metroButton23;
-        private MetroFramework.Controls.MetroButton metroButton24;
+        private MetroFramework.Controls.MetroButton btnSubtract;
         private MetroFramework.Controls.MetroButton metroButton25;
         private MetroFramework.Controls.MetroButton metroButton26;
-        private MetroFramework.Controls.MetroButton metroButton27;
-        private MetroFramework.Controls.MetroButton metroButton28;
-        private MetroFramework.Controls.MetroButton metroButton29;
-        private MetroFramework.Controls.MetroButton metroButton30;
+        private MetroFramework.Controls.MetroButton btnAdd;
+        private MetroFramework.Controls.MetroButton btnOne;
+        private MetroFramework.Controls.MetroButton btnTwo;
+        private MetroFramework.Controls.MetroButton btnThree;
         private MetroFramework.Controls.MetroButton metroButton31;
         private MetroFramework.Controls.MetroButton metroButton32;
-        private MetroFramework.Controls.MetroButton metroButton33;
+        private MetroFramework.Controls.MetroButton btnZero;
         private MetroFramework.Controls.MetroButton metroButton34;
         private MetroFramework.Controls.MetroButton metroButton35;
         private System.Windows.Forms.Label lblNumber;

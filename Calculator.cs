@@ -10,6 +10,10 @@ namespace Calculator
 {
     class Calculator
     {
+        
+        public readonly string[] DIGITS = { "0", "1", "2", "3", "4", "5", "6", "7", "8", "9" };
+        public readonly string[] OPERATORS = { "+", "-", "*", "/"};
+
         private readonly Dictionary<string, (string symbol, int predence, bool rightAssociative)> operators =
             new (string symbol, int predence, bool rightAssociative)[] {
                 ("^", 4, true),
@@ -27,9 +31,12 @@ namespace Calculator
             this.number=number;
             this.expressions=expression;
         }
-        public void EvaluateTheExpression() {
-
+        public string EvaluateTheExpression(string infixExpression) {
+            var postfix = InfixToPostfix(infixExpression);
+            var result = EvaluatePostix(postfix);
+            return result;
         }
+
         // shunting-yard algoritması tablomuz aracılığıyla infix ifadeyi
         //  postfix hale çeviriyor.
         private List<string> InfixToPostfix(string infix) {
@@ -67,14 +74,15 @@ namespace Calculator
             Debug.WriteLine("");
             return postfix;   
         }
-        public string PostfixEvaluation(List<string> postfix) {
+
+        // postfix ifadeyi hesaplıyor.
+        private string EvaluatePostix(List<string> postfix) {
             decimal temp,topStack, retVal=0;
             var stack = new Stack<string>();
             foreach(string s in postfix) {
                 if(Decimal.TryParse(s,out _)) {
                     stack.Push(s);
                 } else if(operators.TryGetValue(s,out var op)) {
-
                     Decimal.TryParse(stack.Pop(), out topStack);
                     Decimal.TryParse(stack.Pop(), out temp);
                     switch(s) {
