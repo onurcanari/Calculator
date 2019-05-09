@@ -12,25 +12,33 @@ namespace Calculator
     {
         
         public readonly string[] DIGITS = { "0", "1", "2", "3", "4", "5", "6", "7", "8", "9" };
-        public readonly string[] OPERATORS = { "+", "-", "*", "/"};
-
+        public readonly string[] OPERATORS = { "+", "-", "×", "÷", "^" };
+        public readonly string[] PARANTHESIS = { "(", ")" };  
         private readonly Dictionary<string, (string symbol, int predence, bool rightAssociative)> operators =
             new (string symbol, int predence, bool rightAssociative)[] {
                 ("^", 4, true),
-                ("*", 3, false),
-                ("/", 3, false),
+                ("×", 3, false),
+                ("÷", 3, false),
                 ("+", 2, false),
                 ("-", 2, false)
             }.ToDictionary(op => op.symbol);
 
         public DynamicText number { get; set; }
         public DynamicText expressions { get; set; }
-
-
+        public int paranthesisInExpressionCount{ get; set; }
+        
         public Calculator(DynamicText number,DynamicText expression) {
             this.number=number;
             this.expressions=expression;
         }
+
+        public static decimal Factorial(decimal n) {
+            if(n<=0)
+                return 1;
+            return n*Factorial(n-1);
+        }
+
+
         public string EvaluateTheExpression(string infixExpression) {
             var postfix = InfixToPostfix(infixExpression);
             var result = EvaluatePostix(postfix);
@@ -75,7 +83,7 @@ namespace Calculator
             return postfix;   
         }
 
-        // postfix ifadeyi hesaplıyor.
+        // postfix ifadeyi hesaplıyor. (Reverse-Polish Notation)
         private string EvaluatePostix(List<string> postfix) {
             decimal temp,topStack, retVal=0;
             var stack = new Stack<string>();
@@ -92,14 +100,14 @@ namespace Calculator
                         case "-":
                             retVal=Decimal.Subtract(temp, topStack);
                             break;
-                        case "/":
+                        case "÷":
                             retVal=Decimal.Divide(temp, topStack);
                             break;
-                        case "*":
+                        case "×":
                             retVal=Decimal.Multiply(temp, topStack);
                             break;
                         case "^":
-                            //retVal=Decimal.Pow(temp, Convert.ToInt32(topStack));
+                            retVal=Calculator.Pow(temp, topStack);
                             break;
                         default:
                             retVal=-987656789;
@@ -110,6 +118,11 @@ namespace Calculator
             }
             return stack.Pop();
         }
-
+        public static decimal Pow(decimal x, decimal y) {
+            decimal result=1;
+            for(int i = 0; i<y; i++)
+                result*=x;
+            return result;
+        } 
     }
 }

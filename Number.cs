@@ -15,6 +15,8 @@ namespace Calculator {
             text+=s;
             OnPropertyChanged();
         }
+        
+
         public override void Delete() {
             if(text.Equals("0")) {
                 return;

@@ -58,8 +58,8 @@
             this.btnTwo = new MetroFramework.Controls.MetroButton();
             this.btnThree = new MetroFramework.Controls.MetroButton();
             this.btnAdd = new MetroFramework.Controls.MetroButton();
-            this.metroButton31 = new MetroFramework.Controls.MetroButton();
-            this.metroButton32 = new MetroFramework.Controls.MetroButton();
+            this.btnLeftParenthesis = new MetroFramework.Controls.MetroButton();
+            this.btnRightParenthesis = new MetroFramework.Controls.MetroButton();
             this.btnZero = new MetroFramework.Controls.MetroButton();
             this.metroButton34 = new MetroFramework.Controls.MetroButton();
             this.metroButton35 = new MetroFramework.Controls.MetroButton();
@@ -81,7 +81,7 @@
             this.metroButton1.Name = "metroButton1";
             this.metroButton1.Size = new System.Drawing.Size(82, 58);
             this.metroButton1.TabIndex = 0;
-            this.metroButton1.Text = "x kare";
+            this.metroButton1.Text = " \tx²";
             this.metroButton1.UseSelectable = true;
             // 
             // metroButton2
@@ -94,7 +94,7 @@
             this.metroButton2.Name = "metroButton2";
             this.metroButton2.Size = new System.Drawing.Size(82, 58);
             this.metroButton2.TabIndex = 1;
-            this.metroButton2.Text = "x üzeri y";
+            this.metroButton2.Text = "xʸ";
             this.metroButton2.UseSelectable = true;
             // 
             // metroButton3
@@ -147,7 +147,7 @@
             this.metroButton5.Name = "metroButton5";
             this.metroButton5.Size = new System.Drawing.Size(82, 58);
             this.metroButton5.TabIndex = 4;
-            this.metroButton5.Text = "root";
+            this.metroButton5.Text = "√";
             this.metroButton5.UseSelectable = true;
             // 
             // metroButton6
@@ -160,7 +160,7 @@
             this.metroButton6.Name = "metroButton6";
             this.metroButton6.Size = new System.Drawing.Size(82, 58);
             this.metroButton6.TabIndex = 5;
-            this.metroButton6.Text = "C";
+            this.metroButton6.Text = "10ˣ";
             this.metroButton6.UseSelectable = true;
             // 
             // metroButton7
@@ -212,7 +212,7 @@
             this.metroButton16.Name = "metroButton16";
             this.metroButton16.Size = new System.Drawing.Size(82, 58);
             this.metroButton16.TabIndex = 15;
-            this.metroButton16.Text = "-";
+            this.metroButton16.Text = "↑";
             this.metroButton16.UseSelectable = true;
             // 
             // metroButton17
@@ -227,6 +227,7 @@
             this.metroButton17.TabIndex = 16;
             this.metroButton17.Text = "CE";
             this.metroButton17.UseSelectable = true;
+            this.metroButton17.Click += new System.EventHandler(this.btnClearNumber_Click);
             // 
             // metroButton18
             // 
@@ -240,6 +241,7 @@
             this.metroButton18.TabIndex = 17;
             this.metroButton18.Text = "C";
             this.metroButton18.UseSelectable = true;
+            this.metroButton18.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // metroButton19
             // 
@@ -251,9 +253,9 @@
             this.metroButton19.Name = "metroButton19";
             this.metroButton19.Size = new System.Drawing.Size(82, 58);
             this.metroButton19.TabIndex = 18;
-            this.metroButton19.Text = "<--";
+            this.metroButton19.Text = "⌫";
             this.metroButton19.UseSelectable = true;
-            this.metroButton19.Click += new System.EventHandler(this.Backspace);
+            this.metroButton19.Click += new System.EventHandler(this.Backspace_Click);
             // 
             // btnDivide
             // 
@@ -265,7 +267,7 @@
             this.btnDivide.Name = "btnDivide";
             this.btnDivide.Size = new System.Drawing.Size(82, 58);
             this.btnDivide.TabIndex = 19;
-            this.btnDivide.Text = "/";
+            this.btnDivide.Text = "÷";
             this.btnDivide.UseSelectable = true;
             this.btnDivide.Click += new System.EventHandler(this.Operators_Click);
             // 
@@ -279,8 +281,9 @@
             this.metroButton21.Name = "metroButton21";
             this.metroButton21.Size = new System.Drawing.Size(82, 58);
             this.metroButton21.TabIndex = 20;
-            this.metroButton21.Text = "+/-";
+            this.metroButton21.Text = "π";
             this.metroButton21.UseSelectable = true;
+            this.metroButton21.Click += new System.EventHandler(this.PiNumber_Click);
             // 
             // btnSeven
             // 
@@ -331,7 +334,7 @@
             this.btnMultiply.Name = "btnMultiply";
             this.btnMultiply.Size = new System.Drawing.Size(82, 58);
             this.btnMultiply.TabIndex = 21;
-            this.btnMultiply.Text = "x";
+            this.btnMultiply.Text = "×";
             this.btnMultiply.UseSelectable = true;
             this.btnMultiply.Click += new System.EventHandler(this.Operators_Click);
             // 
@@ -347,7 +350,7 @@
             this.metroButton23.TabIndex = 22;
             this.metroButton23.Text = "n!";
             this.metroButton23.UseSelectable = true;
-            this.metroButton23.Click += new System.EventHandler(this.FindFactorial);
+            this.metroButton23.Click += new System.EventHandler(this.Factorial_Click);
             // 
             // btnFour
             // 
@@ -412,8 +415,9 @@
             this.metroButton26.Name = "metroButton26";
             this.metroButton26.Size = new System.Drawing.Size(82, 58);
             this.metroButton26.TabIndex = 25;
-            this.metroButton26.Text = "6";
+            this.metroButton26.Text = "±";
             this.metroButton26.UseSelectable = true;
+            this.metroButton26.Click += new System.EventHandler(this.Sign_Click);
             // 
             // btnOne
             // 
@@ -468,31 +472,33 @@
             this.btnAdd.UseSelectable = true;
             this.btnAdd.Click += new System.EventHandler(this.Operators_Click);
             // 
-            // metroButton31
+            // btnLeftParenthesis
             // 
-            this.metroButton31.BackColor = System.Drawing.Color.Transparent;
-            this.metroButton31.FontSize = MetroFramework.MetroButtonSize.Tall;
-            this.metroButton31.FontWeight = MetroFramework.MetroButtonWeight.Regular;
-            this.metroButton31.Location = new System.Drawing.Point(0, 360);
-            this.metroButton31.Margin = new System.Windows.Forms.Padding(0);
-            this.metroButton31.Name = "metroButton31";
-            this.metroButton31.Size = new System.Drawing.Size(82, 58);
-            this.metroButton31.TabIndex = 30;
-            this.metroButton31.Text = "(";
-            this.metroButton31.UseSelectable = true;
+            this.btnLeftParenthesis.BackColor = System.Drawing.Color.Transparent;
+            this.btnLeftParenthesis.FontSize = MetroFramework.MetroButtonSize.Tall;
+            this.btnLeftParenthesis.FontWeight = MetroFramework.MetroButtonWeight.Regular;
+            this.btnLeftParenthesis.Location = new System.Drawing.Point(0, 360);
+            this.btnLeftParenthesis.Margin = new System.Windows.Forms.Padding(0);
+            this.btnLeftParenthesis.Name = "btnLeftParenthesis";
+            this.btnLeftParenthesis.Size = new System.Drawing.Size(82, 58);
+            this.btnLeftParenthesis.TabIndex = 30;
+            this.btnLeftParenthesis.Text = "(";
+            this.btnLeftParenthesis.UseSelectable = true;
+            this.btnLeftParenthesis.Click += new System.EventHandler(this.BtnLeftParenthesis_Click);
             // 
-            // metroButton32
+            // btnRightParenthesis
             // 
-            this.metroButton32.BackColor = System.Drawing.Color.Transparent;
-            this.metroButton32.FontSize = MetroFramework.MetroButtonSize.Tall;
-            this.metroButton32.FontWeight = MetroFramework.MetroButtonWeight.Regular;
-            this.metroButton32.Location = new System.Drawing.Point(83, 360);
-            this.metroButton32.Margin = new System.Windows.Forms.Padding(0);
-            this.metroButton32.Name = "metroButton32";
-            this.metroButton32.Size = new System.Drawing.Size(82, 58);
-            this.metroButton32.TabIndex = 31;
-            this.metroButton32.Text = ")";
-            this.metroButton32.UseSelectable = true;
+            this.btnRightParenthesis.BackColor = System.Drawing.Color.Transparent;
+            this.btnRightParenthesis.FontSize = MetroFramework.MetroButtonSize.Tall;
+            this.btnRightParenthesis.FontWeight = MetroFramework.MetroButtonWeight.Regular;
+            this.btnRightParenthesis.Location = new System.Drawing.Point(83, 360);
+            this.btnRightParenthesis.Margin = new System.Windows.Forms.Padding(0);
+            this.btnRightParenthesis.Name = "btnRightParenthesis";
+            this.btnRightParenthesis.Size = new System.Drawing.Size(82, 58);
+            this.btnRightParenthesis.TabIndex = 31;
+            this.btnRightParenthesis.Text = ")";
+            this.btnRightParenthesis.UseSelectable = true;
+            this.btnRightParenthesis.Click += new System.EventHandler(this.BtnRightParenthesis_Click);
             // 
             // btnZero
             // 
@@ -519,6 +525,7 @@
             this.metroButton34.TabIndex = 33;
             this.metroButton34.Text = ".";
             this.metroButton34.UseSelectable = true;
+            this.metroButton34.Click += new System.EventHandler(this.Dot_Click);
             // 
             // metroButton35
             // 
@@ -550,7 +557,7 @@
             // lblExpression
             // 
             this.lblExpression.Dock = System.Windows.Forms.DockStyle.Right;
-            this.lblExpression.Font = new System.Drawing.Font("Sitka Banner", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblExpression.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblExpression.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.lblExpression.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.lblExpression.Location = new System.Drawing.Point(6, 0);
@@ -587,9 +594,9 @@
             this.tableLayoutPanel2.Controls.Add(this.metroButton4, 3, 0);
             this.tableLayoutPanel2.Controls.Add(this.btnZero, 2, 6);
             this.tableLayoutPanel2.Controls.Add(this.metroButton25, 4, 0);
-            this.tableLayoutPanel2.Controls.Add(this.metroButton32, 1, 6);
+            this.tableLayoutPanel2.Controls.Add(this.btnRightParenthesis, 1, 6);
             this.tableLayoutPanel2.Controls.Add(this.metroButton6, 1, 1);
-            this.tableLayoutPanel2.Controls.Add(this.metroButton31, 0, 6);
+            this.tableLayoutPanel2.Controls.Add(this.btnLeftParenthesis, 0, 6);
             this.tableLayoutPanel2.Controls.Add(this.metroButton7, 2, 1);
             this.tableLayoutPanel2.Controls.Add(this.btnAdd, 4, 5);
             this.tableLayoutPanel2.Controls.Add(this.metroButton8, 3, 1);
@@ -630,18 +637,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(701, 660);
+            this.ClientSize = new System.Drawing.Size(421, 660);
             this.Controls.Add(this.tableLayoutPanel2);
             this.Controls.Add(this.panel1);
-            this.DisplayHeader = false;
             this.KeyPreview = true;
             this.MaximizeBox = false;
             this.Name = "Form1";
-            this.Padding = new System.Windows.Forms.Padding(0, 30, 0, 0);
-            this.Resizable = false;
-            this.ShadowType = MetroFramework.Forms.MetroFormShadowType.None;
-            this.Style = MetroFramework.MetroColorStyle.Silver;
-            this.Text = "Form1";
+            this.Padding = new System.Windows.Forms.Padding(0, 60, 0, 0);
+            this.Text = "ouurlator";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
             this.panel1.ResumeLayout(false);
@@ -681,8 +684,8 @@
         private MetroFramework.Controls.MetroButton btnOne;
         private MetroFramework.Controls.MetroButton btnTwo;
         private MetroFramework.Controls.MetroButton btnThree;
-        private MetroFramework.Controls.MetroButton metroButton31;
-        private MetroFramework.Controls.MetroButton metroButton32;
+        private MetroFramework.Controls.MetroButton btnLeftParenthesis;
+        private MetroFramework.Controls.MetroButton btnRightParenthesis;
         private MetroFramework.Controls.MetroButton btnZero;
         private MetroFramework.Controls.MetroButton metroButton34;
         private MetroFramework.Controls.MetroButton metroButton35;

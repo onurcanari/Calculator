@@ -24,11 +24,15 @@ namespace Calculator {
         public abstract void Append(string s);
         public abstract void Delete();
         public abstract void Clear();
-        
+
+        public virtual string FormattedText() {
+            decimal.TryParse(_text, out decimal n);
+            return n.ToString("N");
+        }
         public override string ToString() {
             return text;
         }
-        protected virtual void OnPropertyChanged([System.Runtime.CompilerServices.CallerMemberName] string propertyName = null) {
+        protected void OnPropertyChanged([System.Runtime.CompilerServices.CallerMemberName] string propertyName = null) {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
         
