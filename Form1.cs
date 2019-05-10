@@ -8,6 +8,7 @@ namespace Calculator {
 
         Button[] digitButtons;
         Button[] operatorButtons;
+        Button[] scientificButtons;
         Calculator calc;
         DynamicText number = new Number();
         DynamicText expression = new Expression();
@@ -22,6 +23,7 @@ namespace Calculator {
             calc=new Calculator(number, expression);
             digitButtons = new Button[]{ btnZero, btnOne, btnTwo, btnThree, btnFour, btnFive, btnSix, btnSeven, btnEight, btnNine};
             operatorButtons=new Button[] {btnAdd, btnSubtract, btnMultiply, btnDivide };
+            scientificButtons=new Button[] { };
         }
 
         private void Digits_Click(object sender, EventArgs e) {
@@ -117,7 +119,7 @@ namespace Calculator {
         }
 
         private void PiNumber_Click(object sender, EventArgs e) {
-            number.text=Math.PI.ToString();
+            number.text=Calculator.PI.ToString();
         }
 
         private void Dot_Click(object sender, EventArgs e) {
@@ -143,6 +145,36 @@ namespace Calculator {
                 number.Clear();
             }
             
+        }
+
+        private void Sin_Click(object sender, EventArgs e) {
+            decimal.TryParse(number.text, out decimal aftermath);
+            number.text=Calculator.Sin(aftermath).ToString();
+        }
+
+        private void Cos_Click(object sender, EventArgs e) {
+            decimal.TryParse(number.text, out decimal aftermath);
+            number.text=Calculator.Sin(aftermath).ToString();
+        }
+
+        private void Tan_Click(object sender, EventArgs e) {
+            decimal.TryParse(number.text, out decimal aftermath);
+            number.text=Calculator.Sin(aftermath).ToString();
+        }
+
+        private void Log_Click(object sender, EventArgs e) {
+            decimal.TryParse(number.text, out decimal aftermath);
+            number.text=Calculator.Log10(aftermath).ToString();
+        }
+
+        private void BtnRoot_Click(object sender, EventArgs e) {
+            decimal.TryParse(number.text, out decimal aftermath);
+            number.text=Calculator.Sqrt(aftermath).ToString();
+        }
+
+        private void BtnSquare_Click(object sender, EventArgs e) {
+            decimal.TryParse(number.text, out decimal aftermath);
+            number.text=Calculator.Pow(aftermath, 2M).ToString();
         }
     }
 }

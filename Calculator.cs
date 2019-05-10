@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Extreme.Mathematics;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
@@ -22,6 +23,7 @@ namespace Calculator
                 ("+", 2, false),
                 ("-", 2, false)
             }.ToDictionary(op => op.symbol);
+        public static readonly decimal PI = 3.1415926535897932384626M;
 
         public DynamicText number { get; set; }
         public DynamicText expressions { get; set; }
@@ -37,7 +39,7 @@ namespace Calculator
                 return 1;
             return n*Factorial(n-1);
         }
-
+        
 
         public string EvaluateTheExpression(string infixExpression) {
             var postfix = InfixToPostfix(infixExpression);
@@ -118,11 +120,54 @@ namespace Calculator
             }
             return stack.Pop();
         }
+
         public static decimal Pow(decimal x, decimal y) {
+            /*
             decimal result=1;
             for(int i = 0; i<y; i++)
                 result*=x;
             return result;
+            */
+            return DecimalMath.Pow(x,y);
         } 
+
+        public static decimal Log10(decimal x) {
+            return DecimalMath.Log10(x);
+        }
+        public static decimal Log(decimal x) {
+            return DecimalMath.Log(x);
+        }
+        public static decimal Sin(decimal x) {
+            return DecimalMath.Sin(x);
+        }
+        public static decimal Cos(decimal x) {
+            return DecimalMath.Cos(x);
+        }
+        public static decimal Tan(decimal x) {
+            return DecimalMath.Tan(x);
+        }
+        public static decimal Sinh(decimal x) {
+            return DecimalMath.Sinh(x);
+        }
+        public static decimal Cosh(decimal x) {
+            return DecimalMath.Cosh(x);
+        }
+        public static decimal Tanh(decimal x) {
+            return DecimalMath.Tanh(x);
+        }
+
+        
+        public static decimal Sqrt(decimal x, decimal epsilon = 0.0M) {
+            if(x<0) throw new OverflowException("Cannot calculate square root from a negative number");
+
+            decimal current = (decimal)Math.Sqrt((double)x), previous;
+            do {
+                previous=current;
+                if(previous==0.0M) return 0;
+                current=(previous+x/previous)/2;
+            }
+            while(Math.Abs(previous-current)>epsilon);
+            return current;
+        }
     }
 }
